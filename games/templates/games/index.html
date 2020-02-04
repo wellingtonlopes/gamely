@@ -1,0 +1,25 @@
+{% extends 'games/base.html' %}
+
+{% block content %}
+    <h1>Games</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre(s)</th>
+                <th>Platform(s)</th>
+                <th>Developer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+                <tr>
+                    <td>{{ game.title }}</td>
+                    <td>{{ game.genres }}</td>
+                    <td>{{ game.platforms }}</td>
+                    <td>{{ game.developer }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock  %}
