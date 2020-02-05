@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <dl>
+        <dt>Title</dt>
+        <dd>{{game.title}}</dd>
+        <dt>Genre(s)</dt>
+        <dd>{{game.genres}}</dd>
+        <dt>Platform(s)</dt>
+        <dd>{{game.platforms}}</dd>
+        <dt>Developer</dt>
+        <dd>{{game.developer}}</dd>
+        <dt>Publisher</dt>
+        <dd>{{game.publisher}}</dd>
+        <dt>Release Date</dt>
+        <dd>{{game.release_date}}</dd>
+    </dl>
+{% endblock  %}
