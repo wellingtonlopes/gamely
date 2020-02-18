@@ -11,6 +11,6 @@ def detail(request, game_title):
     for gt in Game.objects.all():
         if game_title.lower() == gt.title.lower():
             game = gt
-            return render(request, 'games/detail.html', {'game': game})
+            return render(request, 'games/detail.html', {'game': game, 'title':game.title})
     raise Http404()
      

@@ -1,5 +1,18 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import UserRegisterForm
 
 def profile(request):
-    return HttpResponse('<h1>Profile</h1>')
+    return render(request, 'players/profile.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account suscessfully created for {username}! You are now able to log in.')
+            return redirect('login')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'players/register.html', { 'form': form})
