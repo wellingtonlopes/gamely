@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'players.apps.PlayersConfig',
     'Gamely',
     'crispy_forms',
-    'django-cleanup'
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [

@@ -24,5 +24,5 @@ admin.site.register(Platform, PlatformAdmin)
 
 class GameAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'genres', 'platforms','developer')
-
+    prepopulated_fields = {'slug': ('title', )}
 admin.site.register(Game, GameAdmin)

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class Genre(models.Model):
@@ -29,6 +30,7 @@ class Developer(models.Model):
 class Game(models.Model):
     title = models.CharField(max_length=255)
     release_date = models.DateField(default=timezone.now)
+    slug = models.SlugField(max_length=100, unique=True)
     genre = models.ManyToManyField(Genre)
     platform = models.ManyToManyField(Platform)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT)
@@ -43,3 +45,7 @@ class Game(models.Model):
 
     def platforms(self):
         return ", ".join([p.name for p in self.platform.all()])
+
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.title)
+        super().save(*args, **kwargs)

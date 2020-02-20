@@ -1,5 +1,6 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView
 from .models import Game
 
 # Create your views here.
@@ -13,4 +14,8 @@ def detail(request, game_title):
             game = gt
             return render(request, 'games/detail.html', {'game': game, 'title':game.title})
     raise Http404()
-     
+
+class GameDetailView(DetailView):
+    model = Game
+    template_name = 'games/detail.html'
+    slug_url_kwarg = 'slug'
