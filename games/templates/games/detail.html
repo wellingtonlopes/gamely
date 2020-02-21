@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<article class="media content-section">
+    <div class="mr-3">
+        <img class="img-thumbnail img-responsive" src="{{game.image.url}}">
+    </div>
     <dl>
         <dt>Title</dt>
         <dd>{{game.title}}</dd>

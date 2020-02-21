@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 from django.template.defaultfilters import slugify
+from PIL import Image
 
 # Create your models here.
 class Genre(models.Model):
@@ -35,6 +37,7 @@ class Game(models.Model):
     platform = models.ManyToManyField(Platform)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT)
     developer = models.ForeignKey(Developer,on_delete=models.PROTECT)
+    image = models.ImageField(default='default.jpg', upload_to='game_img')
 
     def __str__(self):
         return self.title
@@ -49,3 +52,13 @@ class Game(models.Model):
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         super().save(*args, **kwargs)
+        """ img = Image.open(self.image.path)
+
+        if img.height > 200 or img.width > 200:
+            output_size = (200, 200)
+            img.thumbnail(output_size)
+            img.save(self.image.path) """
+    
+    def get_absolute_url(self):
+        return reverse('games:detail', kwargs={'slug': self.slug})
+    

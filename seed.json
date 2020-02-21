@@ -1,0 +1,857 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$BA0PrgpwAR2R$QoXlXu4nWtU+E9Tm84v/K4Sk35wzvB7sHHQFOCagvyQ=",
+        "last_login": "2020-02-19T14:56:34.940Z",
+        "is_superuser": true,
+        "username": "Admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "wellingtonpblopes@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-02-18T16:47:01.021Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$KwyTZRPLLCzD$CvXQRghZSDcaZFJyoRj5kXAGwtYdaOgcs0fuoxEwrSo=",
+        "last_login": "2020-02-19T14:39:39.844Z",
+        "is_superuser": false,
+        "username": "UsuarioTeste",
+        "first_name": "",
+        "last_name": "",
+        "email": "usuarioteste@gamely.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-18T17:07:05.072Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$fC8gc3i4qWyV$mAjgC0ADh9TOi0h+tVIATkWizfYW7CUhCBrJR+a6+qI=",
+        "last_login": "2020-02-19T14:08:38.342Z",
+        "is_superuser": false,
+        "username": "NovoUsuario",
+        "first_name": "",
+        "last_name": "",
+        "email": "novousuario2@gamely.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-19T14:08:13.744Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kkhezcaivjf7fz93jdp3m5fgb9kfgcqg",
+    "fields": {
+        "session_data": "OGUzNjgzOTAxZjZlN2E2ZWM5NzcwZTEyNWE4NjkwNTJjZTA3MjRhODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5NTI5MjljNGQ3YTZkMzRkYjA5YmI3ODI1MGZkMGM5NDkyZDRjYzA3In0=",
+        "expire_date": "2020-03-04T14:56:35.351Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o6lddrn3um3pvx9tcgc5z9enotomambl",
+    "fields": {
+        "session_data": "OTFjODBiZmQ3OGZmNTMzZDk1Y2ZmNTk1YTlkMWQ3MjQ4MjEwYzg4Nzp7fQ==",
+        "expire_date": "2020-03-04T14:53:53.007Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zj6lpe22slkbgvoanxwkiy4ufb9r6jpv",
+    "fields": {
+        "session_data": "OTFjODBiZmQ3OGZmNTMzZDk1Y2ZmNTk1YTlkMWQ3MjQ4MjEwYzg4Nzp7fQ==",
+        "expire_date": "2020-03-04T14:52:37.111Z"
+    }
+},
+{
+    "model": "games.genre",
+    "pk": 1,
+    "fields": {
+        "name": "Strategy"
+    }
+},
+{
+    "model": "games.genre",
+    "pk": 2,
+    "fields": {
+        "name": "Action"
+    }
+},
+{
+    "model": "games.genre",
+    "pk": 3,
+    "fields": {
+        "name": "Platformer"
+    }
+},
+{
+    "model": "games.platform",
+    "pk": 1,
+    "fields": {
+        "name": "Switch"
+    }
+},
+{
+    "model": "games.platform",
+    "pk": 2,
+    "fields": {
+        "name": "Xbox One"
+    }
+},
+{
+    "model": "games.platform",
+    "pk": 3,
+    "fields": {
+        "name": "PlayStation 4"
+    }
+},
+{
+    "model": "games.platform",
+    "pk": 4,
+    "fields": {
+        "name": "PC"
+    }
+},
+{
+    "model": "games.publisher",
+    "pk": 1,
+    "fields": {
+        "name": "Chucklefish"
+    }
+},
+{
+    "model": "games.publisher",
+    "pk": 2,
+    "fields": {
+        "name": "Nintendo"
+    }
+},
+{
+    "model": "games.developer",
+    "pk": 1,
+    "fields": {
+        "name": "Chucklefish"
+    }
+},
+{
+    "model": "games.developer",
+    "pk": 2,
+    "fields": {
+        "name": "Nintendo"
+    }
+},
+{
+    "model": "games.game",
+    "pk": 1,
+    "fields": {
+        "title": "Wargroove",
+        "release_date": "2019-02-01",
+        "slug": "Wargroove",
+        "publisher": 1,
+        "developer": 1,
+        "image": "default.jpg",
+        "genre": [
+            1
+        ],
+        "platform": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "games.game",
+    "pk": 3,
+    "fields": {
+        "title": "Super Mario Odyssey",
+        "release_date": "2017-10-26",
+        "slug": "super-mario-odyssey",
+        "publisher": 2,
+        "developer": 2,
+        "image": "default.jpg",
+        "genre": [
+            2,
+            3
+        ],
+        "platform": [
+            1
+        ]
+    }
+},
+{
+    "model": "players.player",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "Admin"
+        ],
+        "image": "player_pics/avatarhalor_GFiAjoi.jpg"
+    }
+},
+{
+    "model": "players.player",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "UsuarioTeste"
+        ],
+        "image": "default.png"
+    }
+},
+{
+    "model": "players.player",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "NovoUsuario"
+        ],
+        "image": "player_pics/pikachu.png"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-02-18T16:49:23.551Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "1",
+        "object_repr": "Admin Player",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2020-02-18T16:50:44.863Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "1",
+        "object_repr": "Strategy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2020-02-18T16:50:50.235Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "1",
+        "object_repr": "Switch",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2020-02-18T16:50:55.893Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "2",
+        "object_repr": "Xbox One",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2020-02-18T16:51:00.944Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "3",
+        "object_repr": "PlayStation 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2020-02-18T16:51:06.129Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "4",
+        "object_repr": "PC",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2020-02-18T16:51:29.432Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "publisher"
+        ],
+        "object_id": "1",
+        "object_repr": "Chucklefish",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-02-18T16:51:33.242Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "developer"
+        ],
+        "object_id": "1",
+        "object_repr": "Chucklefish",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2020-02-18T16:51:36.184Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "game"
+        ],
+        "object_id": "1",
+        "object_repr": "Wargroove",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2020-02-18T17:04:50.989Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "1",
+        "object_repr": "Admin Player",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2020-02-18T17:04:59.380Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "2",
+        "object_repr": "Admin Player",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2020-02-18T17:07:05.182Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "UsuarioTeste",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2020-02-18T17:07:22.896Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "3",
+        "object_repr": "UsuarioTeste Player",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2020-02-19T13:57:11.901Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "3",
+        "object_repr": "UsuarioTeste Player",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2020-02-19T13:57:20.891Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "players",
+            "player"
+        ],
+        "object_id": "4",
+        "object_repr": "UsuarioTeste Player",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2020-02-20T13:28:34.661Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "2",
+        "object_repr": "Action",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2020-02-20T13:28:39.732Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "3",
+        "object_repr": "Platformer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2020-02-20T13:28:46.899Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "publisher"
+        ],
+        "object_id": "2",
+        "object_repr": "Nintendo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2020-02-20T13:28:51.382Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "developer"
+        ],
+        "object_id": "2",
+        "object_repr": "Nintendo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2020-02-20T13:32:23.366Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "game"
+        ],
+        "object_id": "2",
+        "object_repr": "Super Mario Odyssey",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2020-02-20T13:32:40.460Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "game"
+        ],
+        "object_id": "2",
+        "object_repr": "Super Mario Odyssey",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2020-02-20T13:33:06.593Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "game"
+        ],
+        "object_id": "3",
+        "object_repr": "Super Mario Odyssey",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2020-02-20T13:53:35.816Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "game"
+        ],
+        "object_id": "4",
+        "object_repr": "Inside left social main policy bill science.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2020-02-20T14:11:50.318Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "6",
+        "object_repr": "Data goal network as. Arm interesting staff TV direction. Image join view game.\nLong whether relate item. Couple agree close receive realize prepare.\nSome exist seven seat according commercial keep. P",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2020-02-20T14:11:50.447Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "5",
+        "object_repr": "Guess group other must culture together. Player report several newspaper little quality.\nThat rate less memory. Goal process back chair thank. Miss treat music industry.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2020-02-20T14:11:50.532Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "genre"
+        ],
+        "object_id": "4",
+        "object_repr": "Bill deep new arm. Never PM night ok share operation. Power glass environmental answer today hear provide suddenly.\nJob maybe they billion hospital difficult voice. Move camera usually enough stock.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2020-02-20T14:12:00.969Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "7",
+        "object_repr": "Image work laugh. Everything far threat they.\nPresent economy remain. None when with especially.\nContinue dream pick mission left produce. As animal health discussion.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2020-02-20T14:12:01.122Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "6",
+        "object_repr": "Above suggest week feel. Family reflect but have last degree government. Board peace production consumer clearly little.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2020-02-20T14:12:01.208Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "platform"
+        ],
+        "object_id": "5",
+        "object_repr": "Without agree end safe especially party any. Conference go garden attack capital produce prevent. Author international win animal hit radio.\nMarket protect five type. Through wide during strategy list",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2020-02-20T14:12:11.703Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "publisher"
+        ],
+        "object_id": "5",
+        "object_repr": "Small start apply feeling sound concern share. Reveal window anyone public many admit.\nReady pressure large story field find. Source street skill very wonder.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2020-02-20T14:12:11.858Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "publisher"
+        ],
+        "object_id": "4",
+        "object_repr": "Might type or arrive there.\nTraining cell animal change environmental each trouble. Politics hotel trouble view exist. Defense new already ground expect party wait do.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2020-02-20T14:12:11.942Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "publisher"
+        ],
+        "object_id": "3",
+        "object_repr": "Music after us low if.\nPartner difficult central movie occur form.\nSense family bring beautiful sure he. Relate later reason. Arm listen current oil.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2020-02-20T14:12:25.634Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "developer"
+        ],
+        "object_id": "5",
+        "object_repr": "Lead go memory far. Fear million their team sing rule family. Pressure within physical report. Own return police front hold.\nCountry compare name this. Letter free use law. Series play return security",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2020-02-20T14:12:25.767Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "developer"
+        ],
+        "object_id": "4",
+        "object_repr": "Image available give message door. Represent make go hundred important course.\nAlthough public suggest newspaper. Central word mention if reflect way. Quickly girl statement arm news fast word.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2020-02-20T14:12:25.859Z",
+        "user": [
+            "Admin"
+        ],
+        "content_type": [
+            "games",
+            "developer"
+        ],
+        "object_id": "3",
+        "object_repr": "Store now ability hour thus level possible control. Too professional bag writer together. Remember fly structure source easy. South anyone note north.",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]

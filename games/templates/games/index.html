@@ -13,7 +13,7 @@
         <tbody>
             {% for game in games %}
                 <tr>
-                    <td><a class="article-title" href="#">{{ game.title }}</a></td>
+                    <td><a class="article-title" href="{% url 'games:detail' game.slug %}">{{ game.title }}</a></td>
                     <td>{{ game.genres }}</td>
                     <td>{{ game.platforms }}</td>
                     <td>{{ game.developer }}</td>
