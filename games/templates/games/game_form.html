@@ -10,8 +10,10 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info">Submit</button>
+                <a href="{% url 'games:detail' object.slug %}" class="btn btn-outline-secondary">Cancel</a>
             </div>
         </form>
     </div>
+    
 {% endblock content %}
     

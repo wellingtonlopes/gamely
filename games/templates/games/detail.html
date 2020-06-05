@@ -1,22 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<article class="media content-section">
-    <div class="mr-3">
-        <img class="img-thumbnail img-responsive" src="{{game.image.url}}">
-    </div>
-    <dl>
-        <dt>Title</dt>
-        <dd>{{game.title}}</dd>
-        <dt>Genre(s)</dt>
-        <dd>{{game.genres}}</dd>
-        <dt>Platform(s)</dt>
-        <dd>{{game.platforms}}</dd>
-        <dt>Developer</dt>
-        <dd>{{game.developer}}</dd>
-        <dt>Publisher</dt>
-        <dd>{{game.publisher}}</dd>
-        <dt>Release Date</dt>
-        <dd>{{game.release_date}}</dd>
-    </dl>
+    <article class="media content-section">
+        <div class="mr-3">
+            <img class="img-thumbnail img-responsive" src="{{game.image.url}}">
+        </div>
+        <dl>
+            <dt>Title</dt>
+            <dd>{{game.title}}</dd>
+            <dt>Genre(s)</dt>
+            <dd>{{game.genres}}</dd>
+            <dt>Platform(s)</dt>
+            <dd>{{game.platforms}}</dd>
+            <dt>Developer</dt>
+            <dd>{{game.developer}}</dd>
+            <dt>Publisher</dt>
+            <dd>{{game.publisher}}</dd>
+            <dt>Release Date</dt>
+            <dd>{{game.release_date}}</dd>
+        </dl>
+    </article>
+    {% if user.is_staff %}
+        <article class="media content-section d-flex justify-content-around align-items-center">
+            <form>
+                <div class="form-row">
+                    <div class="col-auto">
+                        <label class="mt-1 mb-1 mr-1">Would you like to modify this title?</label>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'games:update' object.slug %}">Update</a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'games:delete' object.slug %}">Delete</a>
+                    </div>
+                </div>
+            </form>
+        </article>
+    {% endif %}
 {% endblock  %}

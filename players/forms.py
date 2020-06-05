@@ -20,4 +20,4 @@ class UserUpdateForm(forms.ModelForm):
 class PlayerUpdateForm(forms.ModelForm):
     class Meta:
         model = Player
-        fields = ['image']
+        fields = ['favorite_game', 'image']

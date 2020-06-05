@@ -1,6 +1,4 @@
-from django.http import HttpResponse, Http404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DeleteView, ListView, DetailView, CreateView, UpdateView
 from .models import Game
 
@@ -25,6 +23,7 @@ class GameListView(ListView):
     model = Game
     template_name = 'games/index.html'
     context_object_name = 'games'
+    ordering = ['title']
 
 class GameCreateView(LoginRequiredMixin, CreateView):
     model = Game

@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from games.models import Game
 from PIL import Image
 
 # Create your models here.
 class Player(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.png', upload_to='player_pics')
-
+    favorite_game = models.ForeignKey(Game, on_delete=models.SET_NULL, null=True)
+    
     def __str__(self):
         return f'{self.user.username} Player' 
 
